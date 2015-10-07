@@ -1,34 +1,22 @@
 package com.firebee.se41.firebee;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
-public class LoginActivity extends AppCompatActivity {
+public class ManagementActivty extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        Button loginButton = (Button)findViewById(R.id.btnLogin);
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent menuWindow = new Intent(LoginActivity.this, MainMenu.class);
-                startActivity(menuWindow);
-            }
-        });
+        setContentView(R.layout.activity_management_activty);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_login, menu);
+        getMenuInflater().inflate(R.menu.menu_management_activty, menu);
         return true;
     }
 

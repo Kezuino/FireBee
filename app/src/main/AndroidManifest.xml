@@ -28,6 +28,14 @@
             android:name=".IncidentDetailActivity"
             android:label="@string/title_activity_incident_detail" >
         </activity>
+        <activity
+            android:name=".MainOefening"
+            android:label="MainOefening" >
+        </activity>
+        <activity
+            android:name=".ManagementActivty"
+            android:label="@string/title_activity_management_activty" >
+        </activity>
     </application>
 
 </manifest>
