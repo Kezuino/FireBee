@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="435dp"
+        android:id="@+id/lviewOefeningen"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nieuwe Oefening"
+        android:id="@+id/btnNewTraining"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/lviewOefeningen"
+        android:layout_alignParentEnd="false"
+        android:textSize="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verwijder Oefening"
+        android:id="@+id/btnRemoveTraining"
+        android:layout_below="@+id/lviewOefeningen"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:singleLine="false"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+</RelativeLayout>
