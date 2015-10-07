@@ -25,6 +25,16 @@ public class MainMenu extends AppCompatActivity {
                 startActivity(oefeningWindow);
             }
         });
+
+        Button beheerButton = (Button)findViewById(R.id.btnManagement);
+        beheerButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v)
+            {
+                Intent beheerWindow = new Intent(MainMenu.this, ManagementActivty.class);
+                startActivity(beheerWindow);
+            }
+        });
     }
 
     @Override

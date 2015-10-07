@@ -5,120 +5,156 @@
     android:weightSum="1"
     android:background="#cbcbcb">
 
-    <TabHost
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tabHost">
+        android:layout_height="match_parent"
+        android:id="@+id/horizontalScrollView" >
 
         <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="73dp"
-                android:background="#ffffff"
-                android:tabStripEnabled="false"></TabWidget>
-
-            <FrameLayout
-                android:id="@android:id/tabcontent"
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:id="@+id/Leden"
+                <EditText
                     android:layout_width="match_parent"
-                    android:layout_height="594dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="Voornaam"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:background="#ffffff"
+                    android:layout_weight="0.10" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.12" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText"
+                    android:text="Tussennaam"
+                    android:background="#ffffff"
+                    android:layout_weight="0.10" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.12" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText"
+                    android:text="Achternaam"
+                    android:background="#ffffff"
+                    android:layout_weight="0.10" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.12" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:text="Telefoonnummer"
+                    android:background="#ffffff"
+                    android:layout_weight="0.10" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.07" />
+
+                <Button
+                    android:layout_width="363dp"
+                    android:layout_height="wrap_content"
+                    android:text="Toevoegen"
+                    android:id="@+id/button"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
                     android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:weightSum="1">
 
-                    <Space
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Teams"
+                        android:id="@+id/textView"
+                        android:background="#ffffff"
                         android:layout_weight="0.12" />
 
+                    <Space
+                        android:layout_width="20px"
+                        android:layout_height="20px" />
+
+                    <ListView
+                        android:layout_width="166dp"
+                        android:layout_height="415dp"
+                        android:id="@+id/listView2"
+                        android:layout_weight="0.82" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="192dp"
+                    android:layout_height="match_parent"
+                    android:weightSum="1">
+
                     <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="226dp"
+                        android:layout_height="50dp"
                         android:inputType="textPersonName"
-                        android:text="Voornaam"
+                        android:text="Team naam"
                         android:ems="10"
-                        android:id="@+id/editText"
-                        android:background="#ffffff"
-                        android:layout_weight="0.10" />
+                        android:id="@+id/editText2"
+                        android:background="#ffffff" />
+
+                    <ListView
+                        android:layout_width="236dp"
+                        android:layout_height="165dp"
+                        android:id="@+id/listView3" />
 
                     <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_weight="0.12" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/editText"
-                        android:text="Tussennaam"
-                        android:background="#ffffff"
-                        android:layout_weight="0.10" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_weight="0.12" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/editText"
-                        android:text="Achternaam"
-                        android:background="#ffffff"
-                        android:layout_weight="0.10" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_weight="0.12" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="phone"
-                        android:ems="10"
-                        android:id="@+id/editText"
-                        android:text="Telefoonnummer"
-                        android:background="#ffffff"
-                        android:layout_weight="0.10" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_weight="0.07" />
+                        android:layout_width="132dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="0.96" />
 
                     <Button
-                        android:layout_width="363dp"
+                        android:layout_width="194dp"
                         android:layout_height="wrap_content"
                         android:text="Toevoegen"
                         android:id="@+id/button2"
                         android:layout_gravity="center_horizontal"
                         android:background="#ffffff" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/Teams"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:weightSum="1">
 
                 </LinearLayout>
 
-            </FrameLayout>
+            </LinearLayout>
         </LinearLayout>
-    </TabHost>
-
+    </HorizontalScrollView>
 </LinearLayout>
