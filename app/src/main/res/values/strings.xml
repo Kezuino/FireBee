@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FireBee</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="title_activity_incident">IncidentActivity</string>
+    <string name="title_activity_incident_detail">IncidentDetailActivity</string>
+</resources>
