@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="incident_name">
+        <item>Papier brand</item>
+        <item>Brandalarm</item>
+        <item>Ontruiming station</item>
+    </string-array>
+    <string-array name="incident_location">
+        <item>De stoomboot van Sinterklaas</item>
+        <item>Fontys Eindhoven</item>
+        <item>Spoorlaan 73</item>
+    </string-array>
+</resources>

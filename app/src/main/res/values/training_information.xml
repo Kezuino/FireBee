@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="training_names">
+    <item>Woonhuis Training 23-09-2015</item>
+    <item>Woonhuis Training 20-09-2015</item>
+    <item>Appartement Training 20-09-2015</item>
+    <item>Appartement Training 10-09-2015</item>
+</string-array>
+</resources>
