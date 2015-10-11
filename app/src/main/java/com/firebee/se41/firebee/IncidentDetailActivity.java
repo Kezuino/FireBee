@@ -19,7 +19,7 @@ public class IncidentDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_incident_detail);
-        int id = getIntent().getExtras().getInt("id");
+        final int id = getIntent().getExtras().getInt("id");
         final String[] incidentNames = getResources().getStringArray(R.array.incident_name);
         final String[] incidentLocation = getResources().getStringArray(R.array.incident_location);
         final String name = incidentNames[id];
@@ -43,7 +43,9 @@ public class IncidentDetailActivity extends AppCompatActivity {
         btMaps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mapWindow = new Intent();
+                Intent mapWindow = new Intent(IncidentDetailActivity.this, Incident_BuildingMap.class);
+                mapWindow.putExtra("id", id);
+                startActivity(mapWindow);
             }
         });
     }
