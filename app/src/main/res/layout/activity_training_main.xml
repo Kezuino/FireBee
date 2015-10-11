@@ -21,11 +21,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_below="@+id/lviewOefeningen"
-        android:layout_alignParentEnd="false"
-        android:textSize="30dp"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp" />
+        android:textSize="15dp"
+        android:layout_below="@+id/lviewOefeningen" />
 
     <Button
         android:layout_width="wrap_content"
@@ -37,8 +34,15 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:singleLine="false"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
         android:textAlignment="center"
-        android:textSize="30dp" />
+        android:textSize="15dp" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/btnNewTraining"
+        android:layout_below="@+id/lviewOefeningen"
+        android:layout_toLeftOf="@+id/btnRemoveTraining"
+        android:layout_toStartOf="@+id/btnRemoveTraining" />
 </RelativeLayout>
