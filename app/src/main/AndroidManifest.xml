@@ -49,9 +49,14 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="@string/google_maps_key" />
+        </activity>
         <activity
             android:name=".IncidentMapsActivity"
             android:label="@string/title_activity_incident_maps" >
+        </activity>
+        <activity
+            android:name=".Incident_BuildingMap"
+            android:label="Plattegrond">
         </activity>
     </application>
 

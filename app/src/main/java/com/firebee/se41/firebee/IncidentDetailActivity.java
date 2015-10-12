@@ -1,9 +1,17 @@
 package com.firebee.se41.firebee;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 public class IncidentDetailActivity extends AppCompatActivity {
 
@@ -11,6 +19,35 @@ public class IncidentDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_incident_detail);
+        final int id = getIntent().getExtras().getInt("id");
+        final String[] incidentNames = getResources().getStringArray(R.array.incident_name);
+        final String[] incidentLocation = getResources().getStringArray(R.array.incident_location);
+        final String name = incidentNames[id];
+        String location = incidentLocation[id];
+        TextView tvName = (TextView)findViewById(R.id.tvName);
+        TextView tvLocation = (TextView)findViewById(R.id.tvLocation);
+        tvName.setText(name);
+        tvLocation.setText(location);
+
+        Button btGps = (Button)findViewById(R.id.btGps);
+        btGps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gpsWindow = new Intent(IncidentDetailActivity.this, IncidentMapsActivity.class);
+                gpsWindow.putExtra("incidentName", name);
+                startActivity(gpsWindow);
+            }
+        });
+
+        Button btMaps = (Button)findViewById(R.id.btMap);
+        btMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mapWindow = new Intent(IncidentDetailActivity.this, Incident_BuildingMap.class);
+                mapWindow.putExtra("id", id);
+                startActivity(mapWindow);
+            }
+        });
     }
 
     @Override

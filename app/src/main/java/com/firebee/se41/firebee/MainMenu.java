@@ -15,6 +15,15 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
+        Button meldingButton = (Button)findViewById(R.id.btnIncidents);
+        meldingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent meldingWindow = new Intent(MainMenu.this, IncidentActivity.class);
+                startActivity(meldingWindow);
+            }
+        });
+
         Button oefeningButton = (Button)findViewById(R.id.btnTraining);
         oefeningButton.setOnClickListener( new View.OnClickListener()
         {

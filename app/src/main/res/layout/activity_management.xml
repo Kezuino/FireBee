@@ -13,11 +13,12 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/nugaikweldebuggen">
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="match_parent"
+                android:layout_width="378dp"
                 android:layout_height="match_parent">
 
                 <EditText
@@ -26,7 +27,7 @@
                     android:inputType="textPersonName"
                     android:text="Voornaam"
                     android:ems="10"
-                    android:id="@+id/editText"
+                    android:id="@+id/editText1"
                     android:background="#ffffff"
                     android:layout_weight="0.10" />
 
@@ -38,7 +39,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText"
+                    android:id="@+id/editText69"
                     android:text="Tussennaam"
                     android:background="#ffffff"
                     android:layout_weight="0.10" />
@@ -52,7 +53,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText"
+                    android:id="@+id/editText3"
                     android:text="Achternaam"
                     android:background="#ffffff"
                     android:layout_weight="0.10" />
@@ -90,12 +91,12 @@
 
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_width="wrap_content"
+                android:layout_width="360dp"
                 android:layout_height="match_parent">
 
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:weightSum="1">
 
@@ -104,7 +105,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Teams"
-                        android:id="@+id/textView"
+                        android:id="@+id/teamNameView"
                         android:background="#ffffff"
                         android:layout_weight="0.12" />
 
@@ -115,8 +116,9 @@
                     <ListView
                         android:layout_width="166dp"
                         android:layout_height="415dp"
-                        android:id="@+id/listView2"
-                        android:layout_weight="0.82" />
+                        android:id="@+id/teamView"
+                        android:layout_weight="0.82"
+                        android:background="#ffffff" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -137,7 +139,8 @@
                     <ListView
                         android:layout_width="236dp"
                         android:layout_height="165dp"
-                        android:id="@+id/listView3" />
+                        android:id="@+id/memberView"
+                        android:background="#ffffff" />
 
                     <Space
                         android:layout_width="132dp"

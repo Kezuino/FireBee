@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Team001">
+        <item>Bob Klaazen</item>
+        <item>Rik de Vries</item>
+        <item>Jennifer Maas</item>
+    </string-array>
+    <string-array name="Team002">
+        <item>Rik Bakker</item>
+        <item>Joris Houten</item>
+        <item>Brian Scholten</item>
+    </string-array>
+    <string-array name="Team003">
+        <item>Jennifer Maas</item>
+        <item>Joris Houten</item>
+        <item>Brian Scholten</item>
+    </string-array>
+    <string-array name="Team004">
+        <item>Jennifer Maas</item>
+        <item>Rik Bakker</item>
+        <item>Joris Houten</item>
+    </string-array>
+    <string-array name="Team005">
+        <item>Bob Klaazen</item>
+        <item>Rik de Vries</item>
+        <item>Brian Scholten</item>
+    </string-array>
+    <string-array name="Team006">
+        <item>Rik Bakker</item>
+        <item>Joris Houten</item>
+        <item>Brian Scholten</item>
+    </string-array>
+    <string-array name="Team007">
+        <item>Jennifer Maas</item>
+        <item>Joris Houten</item>
+        <item>Brian Scholten</item>
+    </string-array>
+    <string-array name="Team008">
+        <item>Jennifer Maas</item>
+        <item>Rik Bakker</item>
+        <item>Joris Houten</item>
+    </string-array>
+    <string-array name="Team009">
+        <item>Bob Klaazen</item>
+        <item>Rik de Vries</item>
+        <item>Brian Scholten</item>
+    </string-array>
+</resources>
