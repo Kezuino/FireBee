@@ -7,78 +7,71 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Selecteer Bestand"
-        android:id="@+id/btnSelectFile"
-        android:layout_marginRight="443dp"
-        android:layout_marginEnd="443dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textSize="30dp" />
+        android:id="@+id/button3"
+        android:layout_alignBottom="@+id/textView8"
+        android:layout_toRightOf="@+id/textView10"
+        android:layout_toEndOf="@+id/textView10"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Bestand: "
-        android:id="@+id/txtBestand"
-        android:layout_marginRight="111dp"
-        android:layout_marginEnd="111dp"
+        android:text="Bestand:"
+        android:id="@+id/textView8"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/btnSelectFile"
-        android:layout_toStartOf="@+id/btnSelectFile"
-        android:textSize="30dp" />
+        android:layout_alignRight="@+id/textView10"
+        android:layout_alignEnd="@+id/textView10" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Naam: "
-        android:id="@+id/textView"
-        android:layout_alignTop="@+id/editText"
-        android:layout_alignLeft="@+id/txtBestand"
-        android:layout_alignStart="@+id/txtBestand"
-        android:textSize="30dp" />
+        android:text="Naam:"
+        android:id="@+id/textView9"
+        android:layout_above="@+id/button3"
+        android:layout_alignRight="@+id/textView8"
+        android:layout_alignEnd="@+id/textView8" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_above="@+id/btnSelectFile"
-        android:layout_toRightOf="@+id/txtBestand"
-        android:layout_alignRight="@+id/btnSelectFile"
-        android:layout_alignEnd="@+id/btnSelectFile" />
+        android:id="@+id/editText4"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_alignLeft="@+id/button3"
+        android:layout_alignStart="@+id/button3"
+        android:layout_alignRight="@+id/button3"
+        android:layout_alignEnd="@+id/button3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Bestandssoort"
+        android:id="@+id/textView10"
+        android:layout_below="@+id/button3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="51dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Grootte"
+        android:id="@+id/textView11"
+        android:layout_below="@+id/textView10"
+        android:layout_toLeftOf="@+id/button3"
+        android:layout_toStartOf="@+id/button3" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Toevoegen"
-        android:id="@+id/btnSave"
-        android:textSize="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/btnSelectFile"
-        android:layout_alignEnd="@+id/btnSelectFile" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Bestandsoort:"
-        android:id="@+id/textView2"
-        android:layout_marginTop="70dp"
-        android:layout_below="@+id/btnSelectFile"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView"
-        android:textSize="30dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/textView3"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2"
-        android:layout_below="@+id/textView2"
-        android:textSize="30dp" />
-
+        android:id="@+id/button4"
+        android:layout_below="@+id/textView11"
+        android:layout_alignLeft="@+id/button3"
+        android:layout_alignStart="@+id/button3"
+        android:layout_marginTop="48dp" />
 </RelativeLayout>
