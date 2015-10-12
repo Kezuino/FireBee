@@ -42,17 +42,6 @@
         <activity
             android:name=".ManagementActivty"
             android:label="@string/title_activity_management_activty" >
-<<<<<<< HEAD
-            <meta-data
-                android:name="com.google.android.gms.version"
-                android:value="@integer/google_play_services_version" />
-            <meta-data
-                android:name="com.google.android.maps.v2.API_KEY"
-                android:value="@string/google_maps_key" />
-        </activity>
-        <activity
-            android:name=".IncidentMapsActivity"
-            android:label="@string/title_activity_incident_maps" >
         </activity>
         <activity
             android:name=".Incident_BuildingMap"
@@ -61,11 +50,6 @@
         <activity
             android:name=".NieuweOefeningActivity"
             android:label="@string/title_activity_nieuwe_oefening" >
-=======
-        </activity>
-        <activity
-            android:name=".Incident_BuildingMap"
-            android:label="Plattegrond" >
         </activity>
 
         <meta-data
@@ -77,8 +61,7 @@
 
         <activity
             android:name=".IncidentMapActivity"
-            android:label="@string/title_activity_incident_map" >
->>>>>>> 64f7b8fcfdc230e567a09c0790bc4fbcf06bffc7
+            android:label="@string/title_activity_incident_maps" >
         </activity>
     </application>
 

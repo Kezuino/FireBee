@@ -84,7 +84,7 @@
                     android:layout_width="363dp"
                     android:layout_height="wrap_content"
                     android:text="Toevoegen"
-                    android:id="@+id/button"
+                    android:id="@+id/btAddMember"
                     android:layout_gravity="center_horizontal"
                     android:background="#ffffff" />
             </LinearLayout>

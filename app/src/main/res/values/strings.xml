@@ -7,10 +7,6 @@
     <string name="title_activity_incident">IncidentActivity</string>
     <string name="title_activity_incident_detail">IncidentDetailActivity</string>
     <string name="title_activity_management_activty">ManagementActivty</string>
-<<<<<<< HEAD
     <string name="title_activity_incident_maps">Map</string>
     <string name="title_activity_nieuwe_oefening">NieuweOefeningActivity</string>
-=======
-    <string name="title_activity_incident_map">Map</string>
->>>>>>> 64f7b8fcfdc230e567a09c0790bc4fbcf06bffc7
 </resources>

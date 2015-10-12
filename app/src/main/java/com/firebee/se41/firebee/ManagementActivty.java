@@ -1,6 +1,8 @@
 package com.firebee.se41.firebee;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -34,59 +37,67 @@ public class ManagementActivty extends Activity {
                 String name = teamNames[position];
                 System.out.println(name);
                 String[] members = null;
-                switch (name){
-                    case "Team 001":
-                    {
+                switch (name) {
+                    case "Team 001": {
                         members = getResources().getStringArray(R.array.Team001);
                     }
-                    case "Team 002":
-                    {
+                    case "Team 002": {
                         members = getResources().getStringArray(R.array.Team002);
                     }
-                    case "Team 003":
-                    {
+                    case "Team 003": {
                         members = getResources().getStringArray(R.array.Team003);
                     }
-                    case "Team 004":
-                    {
+                    case "Team 004": {
                         members = getResources().getStringArray(R.array.Team004);
                     }
-                    case "Team 005":
-                    {
+                    case "Team 005": {
                         members = getResources().getStringArray(R.array.Team005);
                     }
-                    case "Team 006":
-                    {
+                    case "Team 006": {
                         members = getResources().getStringArray(R.array.Team006);
                     }
-                    case "Team 007":
-                    {
+                    case "Team 007": {
                         members = getResources().getStringArray(R.array.Team007);
                     }
-                    case "Team 008":
-                    {
+                    case "Team 008": {
                         members = getResources().getStringArray(R.array.Team008);
                     }
-                    case "Team 009":
-                    {
+                    case "Team 009": {
                         members = getResources().getStringArray(R.array.Team009);
                     }
                 }
                 ArrayList memberName = new ArrayList();
-                for(int i = 0; i < members.length; i++)
-                {
+                for (int i = 0; i < members.length; i++) {
                     memberName.add(members[i]);
                 }
-                ListView memberView = (ListView)findViewById(R.id.memberView);
-                final ArrayAdapter memberAdapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1,memberName);
+                ListView memberView = (ListView) findViewById(R.id.memberView);
+                final ArrayAdapter memberAdapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, memberName);
                 memberView.setAdapter(memberAdapter);
                 memberAdapter.addAll(memberName);
-                TextView teamName = (TextView)findViewById(R.id.editText2);
+                TextView teamName = (TextView) findViewById(R.id.editText2);
                 teamName.setText(name);
             }
         });
         final ArrayAdapter listAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,nameList);
         teams.setAdapter(listAdapter);
+
+        Button addMember = (Button)findViewById(R.id.btAddMember);
+        final TextView tvFirstName = (TextView)findViewById(R.id.editText1);
+        addMember.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String displayText = tvFirstName.getText().toString();
+                AlertDialog.Builder builder = new AlertDialog.Builder(ManagementActivty.this);
+                builder.setTitle("FireBee").setMessage("Hulpverlener " + displayText + " toegevoegd" ).setCancelable(true).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
+            });
     }
 
     @Override
