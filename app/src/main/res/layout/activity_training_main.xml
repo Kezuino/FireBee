@@ -19,30 +19,32 @@
         android:text="Nieuwe Oefening"
         android:id="@+id/btnNewTraining"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentStart="false"
         android:layout_alignParentBottom="true"
         android:textSize="15dp"
-        android:layout_below="@+id/lviewOefeningen" />
+        android:layout_below="@+id/lviewOefeningen"
+        android:layout_alignParentEnd="false" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Verwijder Oefening"
         android:id="@+id/btnRemoveTraining"
-        android:layout_below="@+id/lviewOefeningen"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:singleLine="false"
         android:textAlignment="center"
-        android:textSize="15dp" />
+        android:textSize="15dp"
+        android:layout_below="@+id/lviewOefeningen"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true" />
 
     <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/btnNewTraining"
+        android:layout_width="200px"
+        android:layout_height="200px"
         android:layout_below="@+id/lviewOefeningen"
+        android:layout_toRightOf="@+id/btnNewTraining"
+        android:layout_alignBottom="@+id/btnNewTraining"
         android:layout_toLeftOf="@+id/btnRemoveTraining"
         android:layout_toStartOf="@+id/btnRemoveTraining" />
+
 </RelativeLayout>
