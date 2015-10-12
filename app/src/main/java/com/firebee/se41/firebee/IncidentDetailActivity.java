@@ -1,6 +1,7 @@
 package com.firebee.se41.firebee;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,7 +24,7 @@ public class IncidentDetailActivity extends AppCompatActivity {
         final String[] incidentNames = getResources().getStringArray(R.array.incident_name);
         final String[] incidentLocation = getResources().getStringArray(R.array.incident_location);
         final String name = incidentNames[id];
-        String location = incidentLocation[id];
+        final String location = incidentLocation[id];
         TextView tvName = (TextView)findViewById(R.id.tvName);
         TextView tvLocation = (TextView)findViewById(R.id.tvLocation);
         tvName.setText(name);
@@ -33,8 +34,9 @@ public class IncidentDetailActivity extends AppCompatActivity {
         btGps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gpsWindow = new Intent(IncidentDetailActivity.this, IncidentMapsActivity.class);
+                Intent gpsWindow = new Intent(IncidentDetailActivity.this, IncidentMapActivity.class);
                 gpsWindow.putExtra("incidentName", name);
+                gpsWindow.putExtra("incidentLocation", location);
                 startActivity(gpsWindow);
             }
         });

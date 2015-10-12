@@ -2,20 +2,31 @@ package com.firebee.se41.firebee;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.location.Geocoder;
+import android.location.Address;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class IncidentMapsActivity extends FragmentActivity {
+import java.io.IOException;
+import java.util.Locale;
+import java.util.List;
+
+public class IncidentMapActivity extends FragmentActivity {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
+    private String address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_incident_maps);
+        setContentView(R.layout.activity_incident_map);
+        this.address = getIntent().getStringExtra("incidentLocation");
         setUpMapIfNeeded();
     }
 
@@ -60,6 +71,30 @@ public class IncidentMapsActivity extends FragmentActivity {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+        mMap.setMyLocationEnabled(true);
+
+        Geocoder geoCoder = new Geocoder(this, Locale.getDefault());
+        try {
+            List<Address> addresses = geoCoder.getFromLocationName(this.address, 5);
+            if (addresses.size() > 0) {
+
+                Double lat = addresses.get(0).getLatitude();
+                Double lon = addresses.get(0).getLongitude();
+
+                final LatLng user = new LatLng(lat, lon);
+            /*used marker for show the location */
+                mMap.addMarker(new MarkerOptions()
+                        .position(user)
+                        .title(this.address));
+                // Move the camera instantly to hamburg with a zoom of 15.
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(user, 15));
+
+                // Zoom in, animating the camera.
+                mMap.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
